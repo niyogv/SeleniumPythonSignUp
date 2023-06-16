@@ -8,7 +8,7 @@ password=''
 
 class Test_sign_up:
 
-    @pytest.fixture()
+    @pytest.fixture()  #It is predefined step which runs befor the test script
     def test_invoke(self):
         self.driver = webdriver.Chrome()
         self.driver.get('https:www.example.com')
@@ -16,7 +16,7 @@ class Test_sign_up:
         time.sleep(1)
         self.driver.find_element(By.XPATH, '//button').click()
 
-    @pytest.mark.flaky(rerun=2)
+    @pytest.mark.flaky(rerun=2)  #This step runs twice if it fails
     def test_createnew(self,test_invoke):
         #sign up page
         self.driver.find_element(By.LINK_TEXT, 'Create new.').click()
