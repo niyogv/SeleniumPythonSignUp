@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 chrome_options=Options()
-chrome_options.add_arguments('--headless')
+chrome_options.add_argument('--headless')
 
 class Test_sign_up:
 
