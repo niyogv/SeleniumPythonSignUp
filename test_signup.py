@@ -61,3 +61,4 @@ class Test_sign_up:
         self.driver.find_element(By.XPATH, '//button').click()
         time.sleep(10)
 
+print('thanks')
