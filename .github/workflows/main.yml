@@ -21,6 +21,6 @@ jobs:
       - name: Install chromedriver
         run: wget https://chromedriver.storage.googleapis.com/113.0.5672.63/chromedriver_linux64.zip
       - name: unzip
-        run: tar chromedriver_linux64.zip
+        run: unzip chromedriver_linux64.zip
       - name: Run test
         run: pytest test_signup.py
