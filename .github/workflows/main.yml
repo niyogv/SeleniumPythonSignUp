@@ -31,5 +31,5 @@ jobs:
       - name: chmod
         run: chmod +x chromedriver
       #still has to update
-      #- name: Run test
-       # run: pytest test_signup.py
+      - name: Run test
+        run: pytest test_signup.py
