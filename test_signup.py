@@ -10,7 +10,7 @@ class Test_sign_up:
     @pytest.fixture()
     def test_invoke(self):
         self.driver = webdriver.Chrome()
-        self.driver.get('https://qadashboard.iome.ai/')
+        self.driver.get('')
         self.driver.maximize_window()
         time.sleep(1)
         self.driver.find_element(By.XPATH, '//button').click()
