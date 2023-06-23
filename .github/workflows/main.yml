@@ -15,6 +15,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install selenium
+        run: pip install pytest
       - name: Run test
         run: pytest test_sign_up.py
