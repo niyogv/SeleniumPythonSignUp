@@ -18,5 +18,7 @@ jobs:
         run: pip install selenium
       - name: Install pytest
         run: pip install pytest
+      - name: Install chromedriver
+        run: nanasess/setup-chromedriver@v1
       - name: Run test
         run: pytest test_signup.py
