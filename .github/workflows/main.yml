@@ -29,5 +29,5 @@ jobs:
           CHROMEDRIVER_PATH=$(which chromedriver)
           echo "ChromeDriver path: $CHROMEDRIVER_PATH"
       #still has to update
-      #- name: Run test
-       # run: pytest test_signup.py
+      - name: Run test
+        run: pytest test_signup.py
