@@ -14,8 +14,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: Install dependencies
+      - name: Install selenium
         run: pip install selenium
+      - name: Install pytest
         run: pip install pytest
       - name: Run test
         run: pytest test_sign_up.py
