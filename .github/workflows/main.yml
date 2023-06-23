@@ -18,6 +18,12 @@ jobs:
         run: pip install selenium
       - name: Install pytest
         run: pip install pytest
+      - name: install chrome driver
+        run: tar https://chromedriver.storage.googleapis.com/113.0.5672.63/chromedriver_linux64.zip
+      - name: unzip
+        run: unzip chromedriver_linux64.zip
+      - name: chmod
+        run: chmod +x chromedriver
       
       #still has to update
       #- name: Run test
