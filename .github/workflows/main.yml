@@ -30,10 +30,4 @@ jobs:
       - name: Run tests
         run: |
           pytest test_signup.py
-      - name: report
-        if: success()
-        uses: MicrosoftTeams/github-actions@v1
-        with:
-          webhook-url: ${{secrets.TEAMS}}
-          text: 'test'
         
