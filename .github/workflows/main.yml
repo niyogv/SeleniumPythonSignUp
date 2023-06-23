@@ -30,3 +30,4 @@ jobs:
       - name: Run tests
         run: |
           pytest test_signup.py
+          echo "signup success"
