@@ -32,6 +32,7 @@ class Test_sign_up:
         time.sleep(2)
         check=self.driver.find_element(By.XPATH, '//*[@id="__next"]/div/div/div/div/div/div[2]/article')
         assert check.text=='Create a new account', 'sign up page is broken'
+        print('signup page is not broken')
         self.driver.find_element(By.XPATH, '//input[@placeholder="Pick a username (5 or more characters)"]').send_keys(username)
         self.driver.find_element(By.XPATH, '//input[@type="password"]').send_keys(password)
         self.driver.find_element(By.XPATH, '//input[@type="checkbox"]').click()
