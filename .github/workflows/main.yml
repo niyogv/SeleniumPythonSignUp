@@ -1,4 +1,4 @@
-name: CI/CD for Landing Page Tests
+name: CI/CD for Signup Test
 
 on:
   push:
