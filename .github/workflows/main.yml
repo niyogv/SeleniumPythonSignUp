@@ -19,4 +19,4 @@ jobs:
       - name: Install pytest
         run: pip install pytest
       - name: Run test
-        run: pytest ./test_sign_up.py
+        run: pytest test_signup.py
