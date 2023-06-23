@@ -4,13 +4,16 @@ import pytest
 import random
 import string
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
+chrome_options=Options()
+chrome_options.add_arguments('--headless')
 
 class Test_sign_up:
 
     @pytest.fixture()
     def test_invoke(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(options=chrome_options)
         self.driver.get('')
         self.driver.maximize_window()
         time.sleep(1)
