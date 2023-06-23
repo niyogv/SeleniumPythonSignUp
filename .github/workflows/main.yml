@@ -24,6 +24,8 @@ jobs:
         run: unzip chromedriver_linux64.zip
       - name: chmod
         run: chmod +x chromedriver
+      - name: webdriver manager
+        run: pip install webdriver-manager
       #still has to update
       - name: Run test
         run: pytest test_signup.py
