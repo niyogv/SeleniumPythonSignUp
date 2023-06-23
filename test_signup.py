@@ -4,13 +4,16 @@ import pytest
 import random
 import string
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+
 
 
 class Test_sign_up:
 
     @pytest.fixture()
     def test_invoke(self):
-        self.driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver')
+        service = Service(executable_path='/usr/bin/chromedriver')
+        self.driver = webdriver.Chrome(service=service)
         self.driver.get('')
         self.driver.maximize_window()
         time.sleep(1)
