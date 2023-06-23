@@ -15,7 +15,9 @@ jobs:
         with:
           python-version: 3.10.6
       - name: Install selenium
-        run: pip install selenium
+        run: |
+          pip install selenium
+          pip install --upgrade selenium
       - name: Install pytest
         run: pip install pytest
       - name: Install Chrome
@@ -26,7 +28,9 @@ jobs:
       - name: install chrome driver
         run: wget https://chromedriver.storage.googleapis.com/113.0.5672.63/chromedriver_linux64.zip
       - name: unzip
-        run: unzip chromedriver_linux64.zip
+        run: |
+          unzip chromedriver_linux64.zip
+          pip install --upgrade chromedriver-binary
       - name: chmod
         run: chmod +x chromedriver
       #still has to update
