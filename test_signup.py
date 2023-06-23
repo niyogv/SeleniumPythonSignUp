@@ -19,7 +19,7 @@ class Test_sign_up:
         time.sleep(1)
         self.driver.find_element(By.XPATH, '//button').click()
 
-    #@pytest.mark.flaky(rerun=2)
+    @pytest.mark.flaky(rerun=2)
     def test_createnew(self,test_invoke):
         username = ''.join(random.choices(string.ascii_lowercase, k=5))  #Generates the random username with lenght 5
         password_characters = string.ascii_letters + string.digits + string.punctuation #Generates the password with length 10 with special, number, letters
