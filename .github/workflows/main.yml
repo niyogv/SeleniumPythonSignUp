@@ -3,7 +3,7 @@ name: Sign up test
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   sign_up:
