@@ -24,10 +24,6 @@ jobs:
         run: unzip chromedriver_linux64.zip
       - name: chmod
         run: chmod +x chromedriver
-      - name: Find ChromeDriver path
-        run: |
-          CHROMEDRIVER_PATH=$(which chromedriver)
-          echo "ChromeDriver path: $CHROMEDRIVER_PATH"
       #still has to update
-      #- name: Run test
-       # run: pytest test_signup.py
+      - name: Run test
+        run: pytest test_signup.py
