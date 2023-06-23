@@ -19,6 +19,6 @@ jobs:
       - name: Install pytest
         run: pip install pytest
       - name: Install chromedriver
-        run: nanasess/setup-chromedriver@v1
+        run: wget https://chromedriver.storage.googleapis.com/113.0.5672.63/chromedriver_linux64.zip
       - name: Run test
         run: pytest test_signup.py
