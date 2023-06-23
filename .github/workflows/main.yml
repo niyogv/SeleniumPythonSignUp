@@ -29,5 +29,4 @@ jobs:
         run: chmod +x chromedriver
       - name: Run tests
         run: |
-          pytest test_signup.py
-          echo "signup success"
+          python -m pytest test_signup.py --html=report.html
