@@ -11,7 +11,7 @@ class Test_sign_up:
 
     @pytest.fixture()
     def test_invoke(self):
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager())
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager()))
         self.driver.get('')
         self.driver.maximize_window()
         time.sleep(1)
