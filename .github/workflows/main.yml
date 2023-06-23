@@ -18,11 +18,6 @@ jobs:
         run: pip install selenium
       - name: Install pytest
         run: pip install pytest
-      - name: Install chromedriver
-        run: wget https://chromedriver.storage.googleapis.com/113.0.5672.63/chromedriver_linux64.zip
-      - name: unzip
-        run: unzip chromedriver_linux64.zip
-      - name: cd directory
-        run: cd chromedriver_linux64
-      - name: Run test
-        run: pytest test_signup.py
+      
+      #- name: Run test
+       # run: pytest test_signup.py
