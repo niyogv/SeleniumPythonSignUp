@@ -1,4 +1,4 @@
-name: Sign up test
+name: Sign up 
 
 on:
   push:
