@@ -11,8 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v2
-      - uses: actions/setup-chromedriver@v2
-      - run: chromedriver --version
+      - uses: browser-actions/setup-chrome@v1
       - name: Install dependencies
         run: |
           pip install pytest selenium
