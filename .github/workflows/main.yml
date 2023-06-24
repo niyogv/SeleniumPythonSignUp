@@ -16,7 +16,8 @@ jobs:
           pip install pytest selenium
       - name: Install Chrome
       - uses: nanasess/setup-chrome-headless@v1
-       # run: |
+      - run: |
+          chrome --version
         #  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
          # sudo dpkg -i google-chrome-stable_current_amd64.deb
           #sudo apt-get install -f
