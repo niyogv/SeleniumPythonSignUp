@@ -4,16 +4,16 @@ import pytest
 import random
 import string
 from selenium.webdriver.common.by import By
-#from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.options import Options
 
-#chrome_options=Options()
-#chrome_options.add_argument('--headless')
+chrome_options=Options()
+chrome_options.add_argument('--headless')
 
 class Test_sign_up:
 
     @pytest.fixture()
     def test_invoke(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(options=chrome_options)
         self.driver.get('https://qadashboard.iome.ai')
         self.driver.maximize_window()
         time.sleep(1)
