@@ -31,4 +31,12 @@ jobs:
             URL: ${{ secrets.URL }}
         run: |
             pytest test_signup.py
+      - name: push changes
+        if: success()
+        run:
+          git config --local user.email "niyog1994@gmail.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          git commit -m "Update README"
+          git push
         
