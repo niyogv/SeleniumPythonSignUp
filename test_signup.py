@@ -25,7 +25,7 @@ class Test_sign_up:
     def test_createnew(self,test_invoke):
         username = ''.join(random.choices(string.ascii_lowercase, k=5))  #Generates the random username with lenght 5
         password_characters = string.ascii_letters + string.digits + string.punctuation #Generates the password with length 10 with special, number, letters
-        password_lenght=10
+        password_length=10
         password = ''.join(random.sample(password_characters, password_length))
         time.sleep(1)
         print(username)
