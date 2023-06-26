@@ -1,4 +1,5 @@
 import time
+import os
 from selenium import webdriver
 import pytest
 import random
@@ -6,6 +7,7 @@ import string
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
+url = os.environ['URL']
 chrome_options=Options()
 chrome_options.add_argument('--headless')
 
@@ -14,7 +16,7 @@ class Test_sign_up:
     @pytest.fixture()
     def test_invoke(self):
         self.driver = webdriver.Chrome(options=chrome_options)
-        self.driver.get('https://qadashboard.iome.ai')
+        self.driver.get(url)
         self.driver.maximize_window()
         time.sleep(1)
         self.driver.find_element(By.XPATH, '//button').click()
