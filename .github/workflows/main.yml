@@ -27,6 +27,8 @@ jobs:
       - name: chmod
         run: chmod +x chromedriver
       - name: Run tests
+        env:
+            URL: ${{ secrets.URL }}
         run: |
-          pytest test_signup.py
+            pytest test_signup.py
         
