@@ -8,14 +8,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 url = os.environ['URL']
-chrome_options=Options()
-chrome_options.add_argument('--headless')
+#chrome_options=Options()
+#chrome_options.add_argument('--headless')
 
 class Test_sign_up:
 
     @pytest.fixture()
     def test_invoke(self):
-        self.driver = webdriver.Chrome(options=chrome_options)
+        self.driver = webdriver.Chrome()
         self.driver.get(url)
         self.driver.maximize_window()
         time.sleep(1)
