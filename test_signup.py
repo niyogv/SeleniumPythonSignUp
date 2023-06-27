@@ -26,7 +26,9 @@ class Test_sign_up:
         username = ''.join(random.choices(string.ascii_lowercase, k=5))  #Generates the random username with lenght 5
         password_characters = string.ascii_letters + string.digits + string.punctuation #Generates the password with length 10 with special, number, letters
         password_length=10
-        password = ''.join(random.sample(password_characters, password_length))
+        password = ''.join(random.choices(password_characters, k=password_length))
+        while not any(char.isdigit() for char in password) or not any(char.islower() for char in password) or not any(char.isupper() for char in password):
+            password = ''.join(random.choices(password_characters, k=password_length))
         time.sleep(1)
         print(username)
         print(password)
