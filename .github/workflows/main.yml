@@ -34,7 +34,7 @@ jobs:
       - name: send notifications if success
         if: success()
         env:
-            WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
+            WEB: ${{secrets.WEB}}
         run: |
-           curl -H "Content-Type: application/json" -d '{"text": "@Sai Prashanth Qa health check Pipeline success!"}' $WEBHOOK_URL
+           curl -H "Content-Type: application/json" -d '{"text": "@Sai Prashanth Qa health check Pipeline success!"}' $WEB
         
