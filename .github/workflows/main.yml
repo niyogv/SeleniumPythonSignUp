@@ -31,10 +31,10 @@ jobs:
             URL: ${{ secrets.URL }}
         run: |
             pytest test_signup.py
-      - name: send notifications if success
+      - name: send notifications if failed
         if: failure()
         env:
             WEB: ${{secrets.WEB}}
         run: |
-           curl -H "Content-Type: application/json" -d '{"text": "Qa health check Pipeline success!"}' $WEB
+           curl -H "Content-Type: application/json" -d '{"text": "Qa health check Pipeline failed!"}' $WEB
             
