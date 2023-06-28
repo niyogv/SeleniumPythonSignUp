@@ -32,7 +32,7 @@ jobs:
         run: |
             pytest test_signup.py
       - name: send notifications if success
-        if: success()
+        if: failure()
         env:
             WEB: ${{secrets.WEB}}
         run: |
