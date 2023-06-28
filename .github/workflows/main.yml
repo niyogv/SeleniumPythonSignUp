@@ -36,5 +36,5 @@ jobs:
         env:
             WEB: ${{secrets.WEB}}
         run: |
-           curl -H "Content-Type: application/json" -d '{"text": "Qa health check Pipeline success!"}' $WEB
-           echo "@Achala S"
+           curl -H "Content-Type: application/json" -d '"@Achala S"{"text": "Qa health check Pipeline success!"}' $WEB
+            
