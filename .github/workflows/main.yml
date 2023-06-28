@@ -36,5 +36,5 @@ jobs:
         env:
             WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
         run: |
-           curl -H "Content-Type: application/json" -d '{"text": "@Niyog v Qa health check Pipeline success!"}' $WEBHOOK_URL
+           curl -H "Content-Type: application/json" -d '{"text": "@Sai Prashanth Qa health check Pipeline success!"}' $WEBHOOK_URL
         
