@@ -31,4 +31,10 @@ jobs:
             URL: ${{ secrets.URL }}
         run: |
             pytest test_signup.py
+      - name: send notifications if success
+        if: success()
+        env:
+            WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
+        run: |
+           curl -H "Content-Type: application/json" -d '{"text": "Pipeline success!"}' $WEBHOOK_URL
         
