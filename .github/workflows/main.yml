@@ -1,12 +1,9 @@
 name: CI/CD for Signup Test
 
-# on:
-#   push:
-#     branches:
-#       - main
 on:
-  schedule:
-    - cron: "*/5 * * * *"
+  push:
+    branches:
+      - main
 
 jobs:
   test:
