@@ -6,7 +6,7 @@ name: CI/CD for Signup Test
 #       - main
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: "*/5 * * * *"
 
 jobs:
   test:
